@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Molesley" Language="1033" Version="1.0.0.0" Manufacturer="Oh Snap! Development" UpgradeCode="60fd4cbe-8b84-486b-ab87-1407cd311365">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Icon Id="Molesley.ico" SourceFile="..\Molesley\Resources\Molesley.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="Molesley.ico" />
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+    
+		<Feature Id="ProductFeature" Title="Molesley" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+		</Feature>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="*">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="Molesley" Description="Molesley" Target="[#Molesley.exe]" WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\Molesley" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="Molesley" />
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Molesley"/>
+      </Directory>
+    </Directory>
+
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component>
+        <File Source="..\Molesley\bin\Release\GlobalHotKey.dll"/>
+      </Component>
+      <Component>
+        <File Source="..\Molesley\bin\Release\Hardcodet.Wpf.TaskbarNotification.dll"/>
+      </Component>
+      <Component>
+        <File Id="Molesley.exe" Source="..\Molesley\bin\Release\Molesley.exe"/>
+      </Component>
+      <Component>
+        <RegistryValue Id="Autostart" Root="HKCU" Action="write" Key="Software\Microsoft\Windows\CurrentVersion\Run" Name="Molesley" Value="[#Molesley.exe]" Type="string" />
+      </Component>
+    </ComponentGroup>
+  </Product>
+</Wix>
