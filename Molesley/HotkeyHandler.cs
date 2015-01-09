@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Windows.Input;
+using GlobalHotKey;
 
 namespace Molesley
 {
-  using System.Windows.Input;
-
-  using GlobalHotKey;
-
   public class HotkeyHandler
   {
     private HotKeyManager _hotKeyManager;
@@ -27,7 +21,7 @@ namespace Molesley
         _hotKeyManager.Register(Key.P, ModifierKeys.Alt | ModifierKeys.Control | ModifierKeys.Shift);
         _hotKeyManager.Register(Key.Add, ModifierKeys.Alt | ModifierKeys.Control | ModifierKeys.Shift);
         _hotKeyManager.Register(Key.Subtract, ModifierKeys.Alt | ModifierKeys.Control | ModifierKeys.Shift);
-        _hotKeyManager.KeyPressed += this.HotKeyPressed;
+        _hotKeyManager.KeyPressed += HotKeyPressed;
       }
       catch
       {
@@ -39,13 +33,13 @@ namespace Molesley
       switch (args.HotKey.Key)
       {
         case Key.P:
-          _spotifyHandler.SendAction(SpotifyAction.PlayPause);
+          _spotifyHandler.PlayPause();
           break;
         case Key.Add:
-          _spotifyHandler.SendAction(SpotifyAction.NextTrack);
+          _spotifyHandler.NextTrack();
           break;
         case Key.Subtract:
-          _spotifyHandler.SendAction(SpotifyAction.PreviousTrack);
+          _spotifyHandler.PreviousTrack();
           break;
       }
     }

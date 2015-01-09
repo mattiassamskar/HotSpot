@@ -20,7 +20,28 @@ namespace Molesley
     [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
     private static extern int GetWindowTextLength(IntPtr hWnd);
 
-    public void SendAction(SpotifyAction a)
+    public void PlayPause()
+    {
+      SendAction(SpotifyAction.PlayPause);
+    }
+
+    public void NextTrack()
+    {
+      SendAction(SpotifyAction.NextTrack);
+    }
+
+    public void PreviousTrack()
+    {
+      this.SendAction(SpotifyAction.PreviousTrack);
+    }
+
+    public void PauseIfPlaying()
+    {
+      if(IsPlaying())
+        SendAction(SpotifyAction.PlayPause);
+    }
+
+    private void SendAction(SpotifyAction a)
     {
       var spotify = FindWindow("SpotifyMainWindow", null);
 
@@ -28,12 +49,6 @@ namespace Molesley
         return;
 
       SendMessage(spotify, WmAppcommand, IntPtr.Zero, new IntPtr((long)a));
-    }
-
-    public void PauseIfPlaying()
-    {
-      if(this.IsPlaying())
-        this.SendAction(SpotifyAction.PlayPause);
     }
 
     private static IntPtr GetSpotify()
@@ -48,7 +63,7 @@ namespace Molesley
 
     private bool IsPlaying()
     {
-      return this.GetCurrentTrack() != string.Empty;
+      return GetCurrentTrack() != string.Empty;
     }
 
     private string GetCurrentTrack()
@@ -63,8 +78,8 @@ namespace Molesley
       return sb.ToString().Replace("Spotify", "").TrimStart(' ', '-').Trim();
     }
   }
-  
-  public enum SpotifyAction : long
+
+  enum SpotifyAction : long
   {
     None = 0,
     PlayPause = 917504,
