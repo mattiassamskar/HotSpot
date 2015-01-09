@@ -79,6 +79,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="HotkeyHandler.cs" />
+    <Compile Include="LockScreenHandler.cs" />
     <Compile Include="NotifyIconViewModel.cs" />
     <Compile Include="SpotifyHandler.cs" />
     <Page Include="NotifyIconResource.xaml">
