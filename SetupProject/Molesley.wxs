@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="Molesley" Language="1033" Version="1.2.0.0" Manufacturer="Oh Snap! Development" UpgradeCode="60fd4cbe-8b84-486b-ab87-1407cd311365">
+	<Product Id="*" Name="Molesley" Language="1033" Version="1.3.0.0" Manufacturer="Oh Snap! Development" UpgradeCode="60fd4cbe-8b84-486b-ab87-1407cd311365">
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
     <Icon Id="Molesley.ico" SourceFile="..\Molesley\Resources\Molesley.ico"/>
     <Property Id="ARPPRODUCTICON" Value="Molesley.ico" />

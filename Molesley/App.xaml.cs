@@ -23,7 +23,7 @@ namespace Molesley
       lockScreenHandler = new LockScreenHandler(spotifyHandler);
 
       hotkeyHandler.SetupHotKeys();
-      lockScreenHandler.SetupLockScreenListener();
+//      lockScreenHandler.SetupLockScreenListener();
       
       notifyIcon = (TaskbarIcon)FindResource("NotifyIcon");
 
