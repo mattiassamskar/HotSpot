@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace Molesley
+namespace Hotspot
 {
   public class SpotifyHandler
   {

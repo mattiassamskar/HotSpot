@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-namespace Molesley
+namespace Hotspot
 {
   public class LockScreenHandler
   {

@@ -1,5 +1,5 @@
-# Molesley
-###Keyboard shortcuts for Spotify!
+# Hotspot
+### Hotkeys for Spotify!
 
 Command | Shortcut
 ------- | --------

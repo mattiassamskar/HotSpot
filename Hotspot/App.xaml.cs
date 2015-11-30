@@ -2,7 +2,7 @@
 using GlobalHotKey;
 using Hardcodet.Wpf.TaskbarNotification;
 
-namespace Molesley
+namespace Hotspot
 {
 
   /// <summary>

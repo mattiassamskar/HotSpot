@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 
-namespace Molesley
+namespace Hotspot
 {
   public class NotifyIconViewModel
   {

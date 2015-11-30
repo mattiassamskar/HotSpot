@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Molesley", "Molesley\Molesley.csproj", "{B3561CFA-EB5B-4672-A7FF-1DAEBB1F0DA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotspot", "Hotspot\Hotspot.csproj", "{B3561CFA-EB5B-4672-A7FF-1DAEBB1F0DA0}"
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupProject", "SetupProject\SetupProject.wixproj", "{A6381389-A0CC-4AFD-82CE-24F95FEC3C0C}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -36,7 +36,8 @@ Global
 		{B3561CFA-EB5B-4672-A7FF-1DAEBB1F0DA0}.Release|x64.ActiveCfg = Release|Any CPU
 		{B3561CFA-EB5B-4672-A7FF-1DAEBB1F0DA0}.Release|x64.Build.0 = Release|Any CPU
 		{B3561CFA-EB5B-4672-A7FF-1DAEBB1F0DA0}.Release|x86.ActiveCfg = Release|Any CPU
-		{A6381389-A0CC-4AFD-82CE-24F95FEC3C0C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A6381389-A0CC-4AFD-82CE-24F95FEC3C0C}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{A6381389-A0CC-4AFD-82CE-24F95FEC3C0C}.Debug|Any CPU.Build.0 = Debug|x64
 		{A6381389-A0CC-4AFD-82CE-24F95FEC3C0C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{A6381389-A0CC-4AFD-82CE-24F95FEC3C0C}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{A6381389-A0CC-4AFD-82CE-24F95FEC3C0C}.Debug|x64.ActiveCfg = Debug|x64
